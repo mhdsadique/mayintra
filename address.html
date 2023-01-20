@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADDRESS</title>
+    <link rel="stylesheet" href="address.css">
+    <style>
+        * {
+        margin: 0px;
+      }
+      
+        #upar {
+        width: 100%;
+        height: 70px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        display: flex;
+        margin-bottom: 30px;
+      }
+      #logo {
+        height: 60%;
+        display: flex;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .checkout {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        align-items: center;
+        margin-left: 26%;
+      }
+      #safe {
+        display: flex;
+        justify-content: right;
+        margin-left: 300px;
+        align-items: center;
+      }
+      #safe > img {
+        height: 60%;
+      }
+      
+    </style>
+</head>
+<body>
+    <div id="upar">
+        <a href="index.html"><img
+          id="logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png"
+          alt="pic"
+        /></a>
+        <ol class="checkout">
+          <li class="step1 active">BAG</li>
+          <li class="divider">---------</li>
+          <li class="step2" style="color: teal;">ADDRESS</li>
+          <li class="divider">---------</li>
+          <li class="step step3">PAYMENT</li>
+        </ol>
+        <div id="safe">
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+            alt="pics"
+          />
+          <p>100% Secure</p>
+        </div>
+      </div>
+      
+    <div class="container">
+        <form id="form" action="" >
+            <label for="contact_details">CONTACT DETAILS</label>
+            <br>
+            <input id="name" type="text" placeholder="Name">
+            <input id="number" type="text" placeholder="Mobile No">
+            <br>
+            <label for="address">ADDRESS</label>
+            <br>
+            <input id="pin" type="text" placeholder="Pin Code">
+            <br>
+            <input id="address" type="text" placeholder="Address(House No, Building, Street, Area)">
+            <br>
+            <input  id="town" type="text" placeholder="Locality / Town">
+            <br>
+            <div class="city">
+                <input id="city" type="text" placeholder="City / District">
+                <input id="state" type="text" placeholder="State">
+            </div>
+            <br>
+            <label for="saveAddress">SAVE ADDRESS AS</label>
+            <br><br>
+            <div>
+                <button>Home</button>
+                <button>Work</button>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">
+                <label for="cbox">Make this my default address</label>
+            </div>
+            <div class="submit">
+            <input type="submit" value="ADD ADDRESS">
+            </div>
+        </form>
+        <div class="info">
+            <h4>PRICE DETAILS</h4>
+            <br>
+            <div>
+                <p>Total MRP</p>
+                <p class="mrp"></p>
+            </div>
+            <br>
+            <div>
+                <p>Discount on MRP</p>
+                <p class="discount"></p>
+            </div>
+            <br>
+            <div>
+                <p>Convenience Fee</p>
+                <p>Free</p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <p>Total Amount</p>
+                <p class="total"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let price_obj = JSON.parse(localStorage.getItem("price_obj"))
+    let form = document.getElementById("form")
+    let mrp = document.querySelector(".mrp")
+    let discount = document.querySelector(".discount")
+    let total = document.querySelector(".total")
+    form.addEventListener("submit", store)
+    let name = document.getElementById("name")
+    let number = document.getElementById("number")
+    let address = document.getElementById("address")
+    mrp.textContent = "Rs " + price_obj.mrp 
+    discount.textContent = "-Rs " + price_obj.discount 
+    total.textContent = "Rs " + price_obj.total 
+    let para = document.getElementById("something")
+
+    function store() {
+        event.preventDefault()
+        let obj = {}
+        obj.name = name.value
+        obj.address = address.value 
+        obj.number = number.value 
+        localStorage.setItem("obj", JSON.stringify(obj))
+        // window.open("final_address.html")
+        window.location.href="final_address.html"
+    }
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <form id="form">
+        <img src="image\offerlogo.webp">
+        <div id="otp">
+            <input  id="tel" placeholder="Mobile number or Email" minlength="0" maxlength="50">
+            <p>Get <a href=""> OTP </a></p>
+            <h1>Verify with OTP</h1>
+            <div id="input">
+                <input id="first" maxlength="1" type="tel">
+                <input id="second" maxlength="1" type="tel">
+                <input id="third" maxlength="1" type="tel">
+                <input id="four" maxlength="1" type="tel">
+                <input id="five" maxlength="1" type="tel"> 
+            </div>
+            <input id="submit" type="submit" value="CONTINUE">
+           
+            <p style="margin-top: 30px; padding-bottom: 40px;">
+                Having trouble logging in? <a href="loginHelp.html">Get help</a>
+            </p>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    var form = document.querySelector("#form")
+
+    var otpArr=[]
+    form.addEventListener("submit",function(event){
+        event.preventDefault()
+        var otpObj={
+            userEmailMob: form.tel.value,
+            otpOne: form.first.value,
+            otpTwo: form.second.value,
+            otpThree: form.third.value,
+            otpfour: form.four.value,
+        }
+        otpArr.push(otpObj)
+        localStorage.setItem("signupData",JSON.stringify(otpArr))
+    })
+</script>

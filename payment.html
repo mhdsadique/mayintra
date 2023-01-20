@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT</title>
+    <style>
+        * {
+        margin: 0px;
+      }
+      body{
+        font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 13px;
+    }
+
+      #upar {
+        width: 100%;
+        height: 70px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        display: flex;
+        margin-bottom: 30px;
+      }
+      #logo {
+        height: 60%;
+        display: flex;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .checkout {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        align-items: center;
+        margin-left: 26%;
+      }
+      #safe {
+        display: flex;
+        justify-content: right;
+        margin-left: 300px;
+        align-items: center;
+      }
+      #safe > img {
+        height: 60%;
+      }
+        .hr {
+            margin-top: 100px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .left {
+            width: 55%;
+            height: 300px;
+        }
+        .right {
+            width: 35%;
+            height: auto;
+            margin-right: 50px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        .bank {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-bottom: 30px;
+        }
+        .bank-offer {
+            line-height: 1.42857143;
+            color: #424553;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 30px;
+            
+        }
+        ul li {
+            line-height: 1.6;
+            color: #424553;
+            font-size: 14px;
+        }
+        .p {
+            font-size: 16px;
+            font-weight: 550;
+            margin: 0 0 26px 70px;
+            color: rgb(116, 113, 113);
+        }
+        .debit {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            height: auto;
+            width: 50%;
+            margin: 20px;
+            padding: 30px;
+            margin-left: 50px;
+        }
+        .third {
+            display: flex;
+            justify-content: space-between;
+        }
+        #cardnum, #cardname {
+            margin-bottom: 2em;
+            display: block;
+            width: 100%;
+            padding: 1%;
+        }
+        .creditdebit {
+            color: rgb(36, 35, 35);
+            font-weight: 700;
+        }
+        #valid, #cvv {
+            padding: 1%;
+        }
+        .paynow {
+            width: 100%;
+            text-align: center;
+            background: #ff3f6c;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 48px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            margin-top: 50px;
+        }
+        .right {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .mrp, .discount, .convenience, .amount {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #424553;
+        }
+        .discount_value, .free {
+            color: green;
+        }
+        #textButton{
+            color:blue;
+            border:0px solid;
+            background-color: white;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #text {
+        font-size: 14px;
+        color: grey;
+        list-style-type: circle;
+      }
+    </style>
+</head>
+<body>
+    <div id="upar">
+        <a href="index.html"><img
+          id="logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png"
+          alt="pic"
+        /></a>
+        <ol class="checkout">
+          <li class="step1 active">BAG</li>
+          <li class="divider">---------</li>
+          <li class="step2">ADDRESS</li>
+          <li class="divider">---------</li>
+          <li class="step step3" style="color: teal;">PAYMENT</li>
+        </ol>
+        <div id="safe">
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+            alt="pics"
+          />
+          <p>100% Secure</p>
+        </div>
+      </div>
+      
+    <!-- <hr class="hr"> -->
+    <div class="container">
+        <div class="left">
+            <div class="bank">
+                <h4 class="bank-offer">Bank Offer</h4>
+                <!-- <ul>
+                    <li>5% Unlimited Cashback on Flipkart Axis Bank Credit Card. TCA</li>
+                    <li>10% Cashback upto Rs 100 on Paytm Postpaid transaction on a min spend of Rs 1000 . TCA</li>
+                    <li>15% Cashback upto Rs 150 on Freecharge Paylater transaction. TCA</li>
+                    <li>10% Cashback upto Rs 200 on Ola Money Postpaid or wallet transaction on a min spend of Rs 1000 . TCA</li>
+                    <li>Upto Rs 500 Cashback on Mobikwik Wallet Transactions on a min spend of Rs 999.Use code MBK500 on Mobikwik.TCA</li>
+                </ul> -->
+                <ul id="text">
+                    <li>
+                      10% instant discount on IDFC first Bank Cards on a minimum spend
+                      of rup 2,500.TCA
+                    </li>
+                    <span id="points">........</span>
+                    <span id="moreText">
+                      <li>
+                        10% cashback upto Rs 100 on Paytm pospaid transcation on a min
+                        spend of Rs 1000 .TCA
+                      </li>
+                      <li>
+                        5% unlimited cashback on Flipkart Axis bank Credit card .TCA
+                      </li>
+                      <li>
+                        15% cashback upto Rs 150 on FreeCharge Paylater Transaction .TCA
+                      </li>
+                      <li>
+                        10% Cashback upto Rs 200 on OLA money postpaid or wallet
+                        transaction on a min spend of Rs 1000 .TCA
+                      </li>
+                      <li>
+                        Upto Rs 500 cashback on mobikwick wallet transcation on a min
+                        spend of Rs.999 use code ullukapatha on Mobikwick.TCA
+                      </li>
+                      <li>
+                        5% Cashback upto Rs 150 on a minnium spend of Rs 1500 with
+                        payzap.TCA
+                      </li>
+                    </span>
+                  </ul>
+                  <button onclick="toggleText()" id="textButton">show more</button>
+            </div>
+            <p class="p">Complete Purchase</p>
+            <div class="debit">
+                <p class="creditdebit">CREDIT/ DEBIT CARD</p>
+                <input type="text" id="cardnum" placeholder="Card Number">
+                <input type="text" id="cardname" placeholder="Name on Card">
+                <div class="third">
+                    <input type="text" id="valid" placeholder="Valid Thru(MM/YY)">
+                    <input type="text" id="cvv" placeholder="CVV">
+                </div>
+                <button class="paynow">Pay now</button>
+            </div>
+        </div>
+        <div class="right">
+            <h4>PRICE DETAILS</h4>
+            <br>
+            <div class="mrp">
+                <div class="total">Total MRP</div>
+                <div class="value"></div>
+            </div>
+            <br>
+            <div class="discount">
+                <div class="discount_mrp">Discount on MRP</div>
+                <div class="discount_value"></div>
+            </div>
+            <br>
+            <div class="convenience">
+                <div class="fee">Convenience Fee</div>
+                <div class="free">Free</div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="amount">
+                <div class="total"><b>Total Amount</b></div>
+                <div class="total_value"><b></b></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function toggleText() {
+    var points = document.getElementById("points");
+    var showmoretext = document.getElementById("moreText");
+    var buttontext = document.getElementById("textButton");
+    if (points.style.display === "none") {
+      showmoretext.style.display = "none";
+      points.style.display = "inline";
+      buttontext.innerHTML = "show more";
+    } else {
+      showmoretext.style.display = "inline";
+      points.style.display = "none";
+      buttontext.innerHTML = "show less";
+    }
+  }
+  
+    let price_obj = JSON.parse(localStorage.getItem("price_obj"))
+    let mrp = document.querySelector(".value")
+    let discount_value = document.querySelector(".discount_value")
+    let total_value = document.querySelector(".total_value")
+    mrp.textContent = "Rs " + price_obj.mrp 
+    discount_value.textContent = "-Rs " + price_obj.discount 
+    total_value.textContent = "Rs " + price_obj.total
+
+    document.querySelector(".paynow").addEventListener("click",payNow)
+
+    function payNow(){
+        alert("Order id Placed");
+        localStorage.setItem("bag_arr",JSON.stringify(""));
+        window.location.href = "index.html"
+    }
+</script>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAG</title>
+    <style>
+      * {
+        margin: 0px;
+      }
+      body{
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 13px;
+}
+
+      #upar {
+        width: 100%;
+        height: 70px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        display: flex;
+      }
+      #logo {
+        height: 60%;
+        display: flex;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .checkout {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        align-items: center;
+        margin-left: 26%;
+      }
+      #safe {
+        display: flex;
+        justify-content: right;
+        margin-left: 300px;
+        align-items: center;
+      }
+      #safe > img {
+        height: 60%;
+      }
+      #contain {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        /* border: 1px solid; */
+        /* height:600px; */
+      }
+      #boxes {
+        width: 45%;
+        height: 100%;
+        margin: auto;
+        /* border: 1px solid; */
+      }
+      #boxes1 {
+        height: 50px;
+        margin-top: 20px;
+        /* border: 1px solid; */
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        display: flex;
+      }
+      #boxes1 > p {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+      }
+      #boxes1 > button {
+        height: 70%;
+        display: block;
+        margin: auto;
+        background-color: white;
+        color: red;
+        border: 1px solid;
+        cursor: pointer;
+        margin-right: 15px;
+      }
+      #boxes2 {
+        margin-top: 10px;
+        /* border: 1px solid; */
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      #boxes2 > h3 {
+        margin-left: 20px;
+        color: teal;
+      }
+      #text {
+        font-size: 14px;
+        color: grey;
+        list-style-type: circle;
+      }
+
+      #textButton {
+        color: red;
+        background-color: white;
+        border: 0px;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+      #dili {
+        margin-top: 10px;
+        height: 30px;
+        /* border:1px solid; */
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        display: flex;
+      }
+      #dili > img {
+        height: 90%;
+        margin-left: 20px;
+      }
+      #dili > p {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 13px;
+        margin-left: 10px;
+        color: teal;
+      }
+      #pricebox {
+        display: flex;
+        gap: 10px;
+      }
+      /* #boxe{
+            display:flex;
+            margin-left:5px;
+            border:1px solid;
+        } */
+      #products {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      #pic {
+        height: 200px;
+        width: 100%;
+      }
+      #line {
+        color: grey;
+        text-decoration: line-through;
+      }
+      #line + p {
+        color: red;
+      }
+      #saman > div + div {
+        justify-content: center;
+        margin: auto;
+      }
+      #saman > div {
+        margin: auto;
+      }
+      #saman {
+        height: auto;
+        gap: 10px;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      #moreText > li {
+        margin-bottom: 15px;
+      }
+      #pricedetail {
+        margin-top: 10px;
+        margin-left: 20px;
+        color: grey;
+        width: 50%;
+        /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+      }
+      #pricedetail > h3 {
+        margin-left: 10px;
+      }
+
+      #pricedetail > div {
+        display: flex;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: space-between;
+        /* width: 40%; */
+      }
+      #pricedetail > div > p + p {
+        color: red;
+      }
+      #order {
+        display: flex;
+        justify-content: space-between;
+        width: 48%;
+        margin-top: 25px;
+        /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+        margin-left: 23px;
+        padding: 5px;
+      }
+      #order > p + p {
+        color: blue;
+      }
+      #free {
+        display: flex;
+        gap: 5px;
+      }
+      #karoo {
+        text-decoration: line-through;
+        color: black;
+      }
+      #karoo + p {
+        color: rgb(9, 213, 9);
+      }
+      #button {
+        width: 45%;
+        margin-top: 20px;
+        margin-left: 40px;
+        padding: 5px;
+        background-color: red;
+        color: white;
+        border: 0px;
+        font-size: 17px;
+        cursor: pointer;
+      }
+      #click {
+        margin-top: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="upar">
+      <a href="index.html"><img
+        id="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png"
+        alt="pic"
+      /></a>
+      <ol class="checkout">
+        <li class="step1 active" style="color: teal;">BAG</li>
+        <li class="divider">---------</li>
+        <li class="step2">ADDRESS</li>
+        <li class="divider">---------</li>
+        <li class="step step3">PAYMENT</li>
+      </ol>
+      <div id="safe">
+        <img
+          src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png"
+          alt="pics"
+        />
+        <p>100% Secure</p>
+      </div>
+    </div>
+    <div id="contain">
+      <div id="boxes">
+        <div id="boxes1">
+          <p>Check delievery time and services</p>
+          <button>Enter Pincode</button>
+        </div>
+        <div id="boxes2">
+          <h3>Available offers</h3>
+          <ul id="text">
+            <li>
+              10% instant discount on IDFC first Bank Cards on a minimum spend
+              of rup 2,500.TCA
+            </li>
+            <span id="points">........</span>
+            <span id="moreText">
+              <li>
+                10% cashback upto Rs 100 on Paytm pospaid transcation on a min
+                spend of Rs 1000 .TCA
+              </li>
+              <li>
+                5% unlimited cashback on Flipkart Axis bank Credit card .TCA
+              </li>
+              <li>
+                15% cashback upto Rs 150 on FreeCharge Paylater Transaction .TCA
+              </li>
+              <li>
+                10% Cashback upto Rs 200 on OLA money postpaid or wallet
+                transaction on a min spend of Rs 1000 .TCA
+              </li>
+              <li>
+                Upto Rs 500 cashback on mobikwick wallet transcation on a min
+                spend of Rs.999 use code ullukapatha on Mobikwick.TCA
+              </li>
+              <li>
+                5% Cashback upto Rs 150 on a minnium spend of Rs 1500 with
+                payzap.TCA
+              </li>
+            </span>
+          </ul>
+          <button onclick="toggleText()" id="textButton">show more</button>
+        </div>
+        <div id="dili">
+          <img
+            src="https://constant.myntassets.com/checkout/assets/img/ship-free.webp"
+            alt="dil"
+          />
+          <p>Yay! no convience free on this order</p>
+        </div>
+        <div id="products">
+          <div id="boxe"></div>
+        </div>
+      </div>
+      <div>
+        <div id="rightpart">
+          <img
+            src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2022/1/14/d63fc446-4087-4e07-b2dd-1d060368d2661642184399341-Banner_Login-page-400.png"
+          />
+        </div>
+        <div id="pricedetail">
+          <h3>PRICE DETAILS</h3>
+          <div>
+            <p>Total MRP</p>
+            <p id="total">$0</p>
+          </div>
+          <div>
+            <p>Discount MRP</p>
+            <p id="karo">$0</p>
+          </div>
+          <div>
+            <p>Coupon Discount</p>
+            <p>Apply Coupon</p>
+          </div>
+          <div>
+            <p>Convinience Free</p>
+            <div id="free">
+              <p id="karoo">$11</p>
+              <p>Free</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div id="order">
+            <p>Total Amount</p>
+            <p id="end">$0</p>
+          </div>
+          <div>
+            <button id="button">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function toggleText() {
+    var points = document.getElementById("points");
+    var showmoretext = document.getElementById("moreText");
+    var buttontext = document.getElementById("textButton");
+    if (points.style.display === "none") {
+      showmoretext.style.display = "none";
+      points.style.display = "inline";
+      buttontext.innerHTML = "show more";
+    } else {
+      showmoretext.style.display = "inline";
+      points.style.display = "none";
+      buttontext.innerHTML = "show less";
+    }
+  }
+  // var mensData = [
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp",
+  //     name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+  //     price: "1170",
+  //     strikedoffprice: 2599,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-EX3921/reebok_EX3921_1.jpg.plp",
+  //     name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
+  //     price: 699,
+  //     strikedoffprice: 999,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-EX4160/reebok_EX4160_1.jpg.plp",
+  //     name: " MEN'S REEBOK RUNNING AUSTIN SHOES",
+  //     price: 945,
+  //     strikedoffprice: 2099,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-GL2296/reebok_GL2296_1.jpg.plp",
+  //     name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+  //     price: 1549,
+  //     strikedoffprice: 1799,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-GT2338/reebok_GT2338_1.jpg.plp",
+  //     name: "WOMEN'S REEBOK SLEEVE TEE",
+  //     price: 699,
+  //     strikedoffprice: 1245,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-GL2841/adidas_GL2841_1.jpg.plp",
+  //     name: "WOMEN'S REEBOK PP TIGHTS",
+  //     price: 749,
+  //     strikedoffprice: 1299,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-GL2842/adidas_GL2842_1.jpg.plp",
+  //     name: "WOMEN'S REEBOK PP TIGHTS",
+  //     price: 749,
+  //     strikedoffprice: 1299,
+  //   },
+  //   {
+  //     image_url:
+  //       "https://content.shop4reebok.com/static/Product-GK6777/reebok_GK6777_1.jpg.plp",
+  //     name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+  //     price: 1399,
+  //     strikedoffprice: 2799,
+  //   },
+  // ];
+  var sum = 0;
+  var sum1 = 0;
+  var sum2 = 0;
+  // localStorage.setItem("mens", JSON.stringify(mensData));
+  var contain = JSON.parse(localStorage.getItem("bag_arr"));
+  // document.querySelector("#total").innerText=sum;
+  contain.forEach(function (elem, index) {
+    var baxes = document.createElement("div");
+    baxes.setAttribute("id", "saman");
+    baxes.style.display = "flex";
+    var bax = document.createElement("div");
+    var image = document.createElement("img");
+    image.setAttribute("src", elem.image_url);
+    image.setAttribute("id", "pic");
+    bax.append(image);
+    var bax2 = document.createElement("div");
+    var productname = document.createElement("h3");
+    productname.innerText = elem.name;
+    var pricebox = document.createElement("div");
+    pricebox.setAttribute("id", "pricebox");
+    var price = document.createElement("p");
+    price.innerText = elem.price;
+    var offer = document.createElement("p");
+    offer.setAttribute("id", "line");
+    offer.innerText = elem.pprice;
+    sum = sum + Number(elem.pprice);
+    sum1 = sum1 + Number(elem.price);
+    // document.querySelector("#total").innerText=sum;
+    var off = document.createElement("p");
+    off.innerText = elem.off;
+    var ik = document.createElement("p");
+    ik.innerText = "Brand :" + elem.brand;
+    ik.style.color = "grey";
+    ik.style.fontSize = "13px";
+    ik.style.marginBottom = "10px";
+    pricebox.append(price, offer, off);
+
+    var butt = document.createElement("button");
+    butt.innerText = "Remove";
+    butt.style.color = "blue";
+    butt.setAttribute("id", "click");
+    butt.style.borderColor = "blue";
+    butt.style.border = "1px solid";
+    butt.style.marginLeft = "50px";
+    butt.addEventListener("click", function () {
+      kuj(elem, index);
+
+      //    contain.parentElement.remove();
+    });
+    var sele = document.createElement("select");
+    var sele1 = document.createElement("option");
+    sele1.innerText = 1;
+    var sele2 = document.createElement("option");
+    sele2.innerText = 2;
+    var sele3 = document.createElement("option");
+    sele3.innerText = 3;
+    var sele4 = document.createElement("option");
+    sele4.innerText = 4;
+    sele.append(sele1, sele2, sele3, sele4);
+    sele.style.borderColor = "teal";
+    sele.style.border = "2px solid";
+    sele.style.borderColor = "teal";
+    sele.style.borderRadius = "5px";
+    sum = sum * Number(sele.value);
+    bax2.append(productname, ik, pricebox, sele, butt);
+    // sum=sum*sele.value
+    baxes.append(bax, bax2);
+    document.querySelector("#boxe").append(baxes);
+  });
+  sum2 = sum - sum1;
+  document.querySelector("#total").innerText = sum;
+  document.querySelector("#karo").innerText = "-" + sum2;
+  var sum4 = 0;
+  sum4 = sum - sum2;
+  document.querySelector("#end").innerText = sum4;
+  
+  function kuj(elem, index) {
+    contain.splice(index, 1);
+    localStorage.setItem("bag_arr", JSON.stringify(contain));
+    window.location.reload();
+  }
+  let price_obj = {}
+  price_obj.mrp = sum
+  price_obj.discount = sum2 
+  price_obj.total = sum4 
+  localStorage.setItem("price_obj", JSON.stringify(price_obj))
+
+  let button = document.querySelector("#button")
+  button.addEventListener("click", gotoadd)
+
+  function gotoadd() {
+    event.preventDefault()
+    window.location.href="address.html"
+  }
+</script>

@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+  
+  }
+  
+.fcontainer{
+    width: 100%;
+    margin-top: 60px;
+    background-color: transparent;
+}
+.fcard{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+
+}
+.card1{
+    color: #696b79;
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    cursor: pointer;
+    line-height: 1.6;
+    /* display: inline; */
+}
+.card1 > div{
+    display: flex;
+    justify-content: space-around;
+}
+.appimgcard{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.card1 > h3{
+    color: black;
+    font-size: 11px;
+}
+.card1 > div > p{
+    margin-top: 10px;
+    /* margin-left: 5px; */
+}
+.appimg{
+    width: 150px;
+    height: 50px;
+}
+.appimg1{
+    width: 30px;
+    height: 30px;
+}
+.appimg2{
+    width: 45px;
+    height: 45px;
+    margin-top: 9px;
+}
+.appimg3{
+    width: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.f-info{
+    width: 80%;
+    /* display: inline; */
+    margin-left: 10%;
+    margin-top: 20px;
+
+    color: #696b79;
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    cursor: pointer;
+    line-height: 1.6;
+
+}
+.f-info > h3{
+
+    color: black;
+    font-size: 11px;
+}
+
+b{
+    color: black;
+}
