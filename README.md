@@ -68,9 +68,6 @@
 
 </br>
 
-## Thanks for visiting our project.
-
-
 
 
 
